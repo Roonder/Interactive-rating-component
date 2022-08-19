@@ -1,0 +1,59 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+*,
+*:before,
+*:after{
+    box-sizing: inherit;
+}
+body{
+    font-family: v.$overpass;
+    background-color: v.$azulNegro;
+    padding: 30vh 2vh;
+    main, section{
+        border-radius: 2rem;
+    }
+}
+.show{
+    display: block;
+    transition: all .8s ease-out;
+}
+.hidden{
+    display: none;
+}
+.contenedor{
+    background-color: darken(v.$azulOscuro, 3%);
+    width: 95%;
+    max-width: 180rem;
+    padding: 2rem;
+    @include m.mobile{
+        width: 35vh;
+        // max-width: 3rem;
+    }
+    margin: 0 auto;
+
+}
+h1,h2,h3,p{
+    margin: 0;
+}
+p{
+    font-size: 1.5rem;
+}
+.mainTitle{
+    margin: 0 auto;
+    font-size: 2.2rem;
+    text-align: left;
+    color: v.$blanco;
+    padding: 1rem 0;
+}
+.mainParagraph{
+    color: v.$grisClaro;
+    margin-bottom: 2rem;
+}
+a{
+    text-decoration: none;
+}

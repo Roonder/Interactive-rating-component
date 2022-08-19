@@ -1,0 +1,42 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.submited{
+    &.hidden{
+        display: none;
+    }
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    img{
+        padding: 1rem;
+        width: 50%;
+    }
+
+    .submitTitle{
+        border-radius: 2rem;
+        background-color: lighten(v.$azulOscuro, 3%);
+        height: 3rem;
+        width: 80%;
+        @include m.mobile{
+            width: 75%;
+        }
+        color: v.$naranja;
+        text-align: center;
+        padding: .8rem;
+        margin: 1rem 0 1.6rem 0;
+    }
+
+    .mainTitle{
+        font-size: 2.6rem;
+        margin-bottom: .6rem;
+    }
+    .mainParagraph{
+        text-align: center;
+        line-height: 1.5;
+    }
+
+
+}
