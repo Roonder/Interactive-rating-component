@@ -28,10 +28,13 @@ function rate() {
         const rating = document.querySelector('#rate');
 
         if(rateValue === '') {
-            rating.innerHTML = '0';
-            mainSection.classList.add('hidden');
-            submitSection.classList.remove('hidden');
-
+            Swal.fire({
+                title: 'Wait!',
+                text: "Please select a rating before submitting!",
+                icon: 'warning',
+                confirmButtonColor: '#fb7413',
+                confirmButtonText: 'OK!'
+              })
             return;
         }
 
